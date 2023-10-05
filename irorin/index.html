@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <title>온라인 시간표</title>
+</head>
+
+<style>
+  body {
+    width: 1080px;
+    /* 원하는 가로 크기로 설정 */
+    margin: 0 auto;
+    /* 가운데 정렬을 위해 좌우 마진을 자동으로 설정 */
+    height: 1920px;
+  }
+</style>
+
+<body>
+  <div class="timetable">
+    <div class="bg">
+      <div class="blank"></div>
+      <div class="header">
+        <button id="test" class="header_b1"></button>
+        <button id="meals" class="header_b2"></button>
+        <button id="weather" class="header_b3"></button>
+        <button id="calendar" class="header_b4"></button>
+        <button id="Finding_way" class="header_b5"></button>
+        <button id="fortune" class="header_b6"></button>
+        <button id="rule" class="header_b7"></button>
+      </div>
+      <div class="blank1">
+        <div class="MAD"><span id="current-month" class="month"></span></div>
+        <div class="MAD"><span id="current-day" class="day"></span></div>
+        <div class="GAC"><a class="grade">3</a></div>
+        <div class="GAC"><a class="class">8</a></div>
+      </div>
+      <div class="timeT">
+        <div class="TT_gaide">
+          <div class="grid">
+
+            <button id="B11" , class="TT_b">2,2</button>
+            <button id="B12" , class="TT_b">2,3</button>
+            <button id="B13" , class="TT_b">2,4</button>
+            <button id="B14" , class="TT_b">2,5</button>
+            <button id="B15" , class="TT_b">2,6</button>
+
+            <button id="B21" , class="TT_b">3,2</button>
+            <button id="B22" , class="TT_b">3,3</button>
+            <button id="B23" , class="TT_b">3,4</button>
+            <button id="B24" , class="TT_b">3,5</button>
+            <button id="B25" , class="TT_b">3,6</button>
+
+            <button id="B31" , class="TT_b">4,2</button>
+            <button id="B32" , class="TT_b">4,3</button>
+            <button id="B33" , class="TT_b">4,4</button>
+            <button id="B34" , class="TT_b">4,5</button>
+            <button id="B35" , class="TT_b">4,6</button>
+
+            <button id="B41" , class="TT_b">5,2</button>
+            <button id="B42" , class="TT_b">5,3</button>
+            <button id="B43" , class="TT_b">5,4</button>
+            <button id="B44" , class="TT_b">5,5</button>
+            <button id="B45" , class="TT_b">5,6</button>
+
+            <button id="B51" , class="TT_b">6,2</button>
+            <button id="B52" , class="TT_b">6,3</button>
+            <button id="B53" , class="TT_b">6,4</button>
+            <button id="B54" , class="TT_b">6,5</button>
+            <button id="B55" , class="TT_b">6,6</button>
+
+            <button id="B61" , class="TT_b">7,2</button>
+            <button id="B62" , class="TT_b">7,3</button>
+            <button id="B63" , class="TT_b">7,4</button>
+            <button id="B64" , class="TT_b">7,5</button>
+            <button id="B65" , class="TT_b">7,6</button>
+
+            <button id="B71" , class="TT_b">8,2</button>
+            <button id="B72" , class="TT_b">8,3</button>
+            <button id="B73" , class="TT_b">8,4</button>
+            <button id="B74" , class="TT_b">8,5</button>
+            <button id="B75" , class="TT_b">8,6</button>
+
+          </div>
+        </div>
+      </div>
+      <div class="blank2"></div>
+      <div class="alram_box">
+        <textarea id="message" rows="4" cols="50"></textarea>
+      </div>
+      <div class="blank3"></div>
+
+      <div class="label-container">
+        <img id="image" alt="이미지">
+      </div>
+
+      <button id="update">수정으로 이동</button>
+
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+  <script src="index_time.js"></script>
+  <script src="index_TT.js"></script>
+
+</body>
+
+</html>

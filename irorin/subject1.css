@@ -1,0 +1,28 @@
+@font-face {
+  font-family: myFont;
+  src: url("./font/KCC-Ganpan.ttf");
+}
+
+* {
+  font-family: myFont, sans-serif;
+}
+
+.bg {
+  background-image: url("image/index/subject1_bg.svg");
+  width: 1080px;
+  height: 1920px;
+}
+
+.blank {
+  width: 1080px;
+  height: 19.282px;
+}
+
+.back_button {
+  width: 146px;
+  height: 146px;
+  margin-left: 910px;
+  background-image: url("./image/index/back.svg");
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid rgba(255, 255, 255, 0);
+}

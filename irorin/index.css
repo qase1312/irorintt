@@ -1,0 +1,204 @@
+@font-face {
+  font-family: myFont;
+  src: url("./font/KCC-Ganpan.ttf");
+}
+* { font-family: myFont, sans-serif; }
+
+.bg {
+  background-image: url("image/bg.svg");
+  width: 1080px;
+  height: 1920px;
+
+}
+
+.blank{
+  width: 1080px;
+  height: 28px;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  height: 192px;
+}
+
+
+.header_b1 {
+  width: 143px;
+  height: 192px;
+  background-image: url(./image/test.svg);
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid rgba(255, 255, 255, 0);
+  margin-left: 18px;
+}
+
+.header_b2 {
+  width: 143px;
+  height: 192px;
+  background-image: url(./image/meals.svg);
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid rgba(255, 255, 255, 0);
+  margin-left: 6.5px;
+}
+
+.header_b3 {
+  width: 143px;
+  height: 192px;
+  background-image: url(./image/weather.svg);
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid rgba(255, 255, 255, 0);
+  margin-left: 6.5px;
+}
+
+.header_b4 {
+  width: 143px;
+  height: 192px;
+  background-image: url(./image/calendar.svg);
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid rgba(255, 255, 255, 0);
+  margin-left: 6.5px;
+}
+
+.header_b5 {
+  width: 143px;
+  height: 192px;
+  background-image: url(./image/Finding_way.svg);
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid rgba(255, 255, 255, 0);
+  margin-left: 6.5px;
+}
+
+.header_b6 {
+  width: 143px;
+  height: 192px;
+  background-image: url(./image/fortune.svg);
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid rgba(255, 255, 255, 0);
+  margin-left: 6.5px;
+}
+
+.header_b7 {
+  width: 143px;
+  height: 192px;
+  background-image: url(./image/rule.svg);
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid rgba(255, 255, 255, 0);
+  margin-left: 6.5px;
+}
+
+.blank1{
+  display: flex;
+  width: 1080px;
+  height: 375px;
+}
+
+.MAD{
+  padding-top: 54px;
+}
+
+.month {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  margin-left: 54px;
+}
+
+.day {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  margin-left:146px;
+}
+
+.GAC{
+  padding-top: 135px;
+}
+
+.grade{
+  margin-left:242px;
+  font-size: 79px;
+  font-weight: bold;
+  color: white;
+}
+
+.class{
+  margin-left:244px;
+  font-size: 79px;
+  font-weight: bold;
+  color: white;
+}
+
+
+.timeT{
+  width: 775px;
+  height: 870px;
+  margin: 0px 255px;
+}
+
+.TT_gaide{
+  width: 740px;
+  height: 863px;
+  margin-left: 8px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 30px;
+}
+
+.TT_b{
+  font-size: 23px;
+  height: 98px;
+  background-image: url(./image/TT_b.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255,0);
+  border: 2px solid rgba(255, 255, 255,0);
+}
+
+.blank2{
+  display: flex;
+  width: 1080px;
+  height: 65px;
+}
+
+
+.alram_box{
+  width: 1080px;
+  height: 160px;
+}
+
+#message {
+  resize: none;
+  width: 953px;
+  height: 160px;
+  margin-left: 63px;
+}
+
+.blank3{
+  width: 1080px;
+  height: 44px;
+}
+
+.banner{
+  width: 1080px;
+  height: 147px;
+}
+
+.label-container {
+  text-align: center;
+}
+
+#image {
+  max-width: 100%;
+  height: auto;
+  transition: opacity 0.5s;
+}
+
+#label {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+

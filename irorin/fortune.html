@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>랜덤 문자열 팝업</title>
+  <link rel="stylesheet" href="fortune.css">
+</head>
+
+<style>
+  body {
+    width: 1080px;
+    /* 원하는 가로 크기로 설정 */
+    margin: 0 auto;
+    /* 가운데 정렬을 위해 좌우 마진을 자동으로 설정 */
+    height: 1920px;
+  }
+</style>
+
+<body>
+  <div class="bg">
+    <div class="blank"></div>
+    <div class="header">
+      <button id="test" class="header_b1"></button>
+      <button id="meals" class="header_b2"></button>
+      <button id="weather" class="header_b3"></button>
+      <button id="calendar" class="header_b4"></button>
+      <button id="Finding_way" class="header_b5"></button>
+      <button id="fortune" class="header_b6"></button>
+      <button id="rule" class="header_b7"></button>
+    </div>
+    <div id="element2" class="cap_lump"></div>
+
+    <button id="element1" id="actionButton" class="random"></button>
+
+    <div class="cap hidden" id="element3"></div>
+    <div id="popup" class="popup">
+      <div id="popup-content" class="popup-content">
+          <h2 class="pop_header" style="text-align:center">오늘의 운세</h2>
+          <h2 id="lucky_v" class="lucky_value" style="text-align:center">1</h2>
+          <h2 id="lucky_i" class="lucky_info" style="text-align:center">1</h2>
+          <button id="close-button" class="close_b">X</button>
+      </div>
+    </div>
+  
+  </div>
+
+  <script src="fortune.js"></script>
+  <script src="fortune_text.js"></script>
+</body>
+
+</html>
