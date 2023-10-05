@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>랜덤 문자열 팝업</title>
+  <link rel="stylesheet" href="subject4.css">
+</head>
+
+<style>
+  body {
+    width: 1080px;
+    /* 원하는 가로 크기로 설정 */
+    margin: 0 auto;
+    /* 가운데 정렬을 위해 좌우 마진을 자동으로 설정 */
+    height: 1920px;
+  }
+</style>
+
+<body>
+  <div class="bg">
+    <div class="blank"></div>
+    <button id="back" class="back_button"></button>
+  </div>
+
+  <script>
+    const back = document.getElementById('back');
+
+back.addEventListener('click', () => {
+  window.location.href = 'index.html';
+});
+
+var evaluations = JSON.parse(localStorage.getItem("evaluations")) || [];
+var listElement = document.getElementById("evaluationList");
+
+function displayEvaluationsBySubject(subject) {
+  listElement.innerHTML = "";
+
+  for (var i = 0; i < evaluations.length; i++) {
+    var evaluation = evaluations[i];
+    if (evaluation.subject === subject) {
+      var listItem = document.createElement("li");
+      listItem.textContent = `월: ${evaluation.month}, 일: ${evaluation.day}, 과목: ${evaluation.subject}, 내용: ${evaluation.evaluation}`;
+      listElement.appendChild(listItem);
+    }
+  }
+}
+
+// 초기화 시 저장된 정보 표시
+displayEvaluationsBySubject("내선공사"); // 과목명이 "기계요소설계"인 정보만 표시
+  </script>
+</body>
+
+</html>

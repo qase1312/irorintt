@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>평가 정보 관리</title>
+</head>
+
+<body>
+  <h1>평가 정보 입력</h1>
+  <select id="monthSelect">
+    <option value="" disabled selected hidden>달</option>
+    <option value="1">1월</option>
+    <option value="2">2월</option>
+    <option value="3">3월</option>
+    <option value="4">4월</option>
+    <option value="5">5월</option>
+    <option value="6">6월</option>
+    <option value="7">7월</option>
+    <option value="8">8월</option>
+    <option value="9">9월</option>
+    <option value="10">10월</option>
+    <option value="11">11월</option>
+    <option value="12">12월</option>
+  </select>
+  <select id="daySelect">
+    <option value="" disabled selected hidden>일</option>
+    <option value="1">1일</option>
+    <option value="2">2일</option>
+    <option value="3">3일</option>
+    <option value="4">4일</option>
+    <option value="5">5일</option>
+    <option value="6">6일</option>
+    <option value="7">7일</option>
+    <option value="8">8일</option>
+    <option value="9">9일</option>
+    <option value="10">10일</option>
+    <option value="11">11일</option>
+    <option value="12">12일</option>
+    <option value="13">13일</option>
+    <option value="14">14일</option>
+    <option value="15">15일</option>
+    <option value="16">16일</option>
+    <option value="17">17일</option>
+    <option value="18">18일</option>
+    <option value="19">19일</option>
+    <option value="20">20일</option>
+    <option value="21">21일</option>
+    <option value="22">22일</option>
+    <option value="23">23일</option>
+    <option value="24">24일</option>
+    <option value="25">25일</option>
+    <option value="26">26일</option>
+    <option value="27">27일</option>
+    <option value="28">28일</option>
+    <option value="29">29일</option>
+    <option value="30">30일</option>
+    <option value="31">31일</option>
+  </select>
+
+  <select id="subjectInput">
+    <option value="" disabled selected hidden>과목</option>
+    <option value="디지털논리회로">디지털논리회로</option>
+    <option value="시스템프로그래밍">시스템프로그래밍</option>
+    <option value="반도체개발">반도체개발</option>
+    <option value="내선공사">내선공사</option>
+    <option value="진로">진로</option>
+    <option value="창체">창체</option>
+    <option value="자동제어시스템운영">자동제어시스템운영</option>
+    <option value="기계요소설계">기계요소설계</option>
+  </select>
+  <textarea id="evaluationInput" placeholder="수행평가 내용을 입력하세요"></textarea>
+  <button onclick="addEvaluation()">입력</button>
+
+  <h2>평가 정보 리스트</h2>
+  <ul id="evaluationList"></ul>
+
+  <button onclick="back()">뒤로가기</button>
+  <script>
+    function back() {
+      window.history.back();
+    }
+    var evaluations = JSON.parse(localStorage.getItem("evaluations")) || [];
+
+    function addEvaluation() {
+      var month = document.getElementById("monthSelect").value;
+      var day = document.getElementById("daySelect").value;
+      var subject = document.getElementById("subjectInput").value;
+      var evaluation = document.getElementById("evaluationInput").value;
+
+      var evaluationDict = {
+        month: month,
+        day: day,
+        subject: subject,
+        evaluation: evaluation
+      };
+
+      evaluations.push(evaluationDict);
+      saveToLocalStorage();
+
+      // 리스트를 화면에 표시
+      displayEvaluations();
+    }
+
+    function saveToLocalStorage() {
+      localStorage.setItem("evaluations", JSON.stringify(evaluations));
+    }
+
+    function removeEvaluation(index) {
+      evaluations.splice(index, 1);
+      saveToLocalStorage();
+      displayEvaluations();
+    }
+
+    function displayEvaluations() {
+      var listElement = document.getElementById("evaluationList");
+      listElement.innerHTML = "";
+
+      for (var i = 0; i < evaluations.length; i++) {
+        var evaluation = evaluations[i];
+        var listItem = document.createElement("li");
+        listItem.textContent = `월: ${evaluation.month}, 일: ${evaluation.day}, 과목: ${evaluation.subject}, 내용: ${evaluation.evaluation}`;
+
+        var deleteButton = document.createElement("button");
+        deleteButton.textContent = "X";
+        deleteButton.onclick = (function (index) {
+          return function () {
+            removeEvaluation(index);
+          };
+        })(i);
+
+        listItem.appendChild(deleteButton);
+        listElement.appendChild(listItem);
+      }
+    }
+
+    // 초기화 시 저장된 정보 표시
+    displayEvaluations();
+  </script>
+</body>
+
+</html>

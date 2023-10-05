@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>셀렉트 박스 예제</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    label {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    select {
+      padding: 5px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 200px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #044f9f;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <label for="selectTime">시간:</label>
+    <select id="selectTime">
+      <option value="0">1교시</option>
+      <option value="1">2교시</option>
+      <option value="2">3교시</option>
+      <option value="3">4교시</option>
+      <option value="4">5교시</option>
+      <option value="5">6교시</option>
+      <option value="6">7교시</option>
+    </select>
+
+    <br>
+
+    <label for="selectWeek">요일:</label>
+    <select id="selectWeek">
+      <option value="0">월요일</option>
+      <option value="1">화요일</option>
+      <option value="2">수요일</option>
+      <option value="3">목요일</option>
+      <option value="4">금요일</option>
+    </select>
+
+    <br>
+
+    <label for="selectName">교과목명:</label>
+    <select id="selectName">
+      <option value="디지털논리회로">디지털논리회로</option>
+      <option value="시스템프로그래밍">시스템프로그래밍</option>
+      <option value="반도체개발">반도체개발</option>
+      <option value="내선공사">내선공사</option>
+      <option value="진로">진로</option>
+      <option value="창체">창체</option>
+      <option value="자동제어시스템운영">자동제어시스템운영</option>
+      <option value="기계요소설계">기계요소설계</option>
+    </select>
+
+    <br>
+
+    <button id="update">업데이트</button>
+
+    <br>
+
+    <button id="back">뒤로가기</button>
+  </div>
+
+  <script src="update_TT.js"></script>
+</body>
+
+</html>

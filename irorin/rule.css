@@ -1,0 +1,141 @@
+@font-face {
+  font-family: myFont;
+  src: url("./font/KCC-Ganpan.ttf");
+}
+
+* {
+  font-family: myFont, sans-serif;
+}
+
+.bg {
+  background-image: url("image/rule_f/rule_bg.svg");
+  width: 1080px;
+  height: 1920px;
+}
+
+.blank {
+  width: 1080px;
+  height: 28px;
+}
+
+.blank {
+  width: 1080px;
+  height: 28px;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  height: 192px;
+}
+
+
+.header_b1 {
+  width: 143px;
+  height: 192px;
+  background-image: url(./image/test.svg);
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid rgba(255, 255, 255, 0);
+  margin-left: 18px;
+  opacity: 0.2;
+}
+
+.header_b2 {
+  width: 143px;
+  height: 192px;
+  background-image: url(./image/meals.svg);
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid rgba(255, 255, 255, 0);
+  margin-left: 6.5px;
+  opacity: 0.2;
+}
+
+.header_b3 {
+  width: 143px;
+  height: 192px;
+  background-image: url(./image/weather.svg);
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid rgba(255, 255, 255, 0);
+  margin-left: 6.5px;
+  opacity: 0.2;
+}
+
+.header_b4 {
+  width: 143px;
+  height: 192px;
+  background-image: url(./image/calendar.svg);
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid rgba(255, 255, 255, 0);
+  margin-left: 6.5px;
+  opacity: 0.2;
+}
+
+.header_b5 {
+  width: 143px;
+  height: 192px;
+  background-image: url(./image/Finding_way.svg);
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid rgba(255, 255, 255, 0);
+  margin-left: 6.5px;
+  opacity: 0.2;
+}
+
+.header_b6 {
+  width: 143px;
+  height: 192px;
+  background-image: url(./image/fortune.svg);
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid rgba(255, 255, 255, 0);
+  margin-left: 6.5px;
+  opacity: 0.2;
+}
+
+.header_b7 {
+  width: 143px;
+  height: 192px;
+  background-image: url(./image/rule.svg);
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid rgba(255, 255, 255, 0);
+  margin-left: 6.5px;
+}
+
+.button_list{
+  width: 880px;
+  height: 170px;
+  margin-left: 100px;
+  margin-top: 200px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 40px;
+}
+
+.class_rule{
+  background-image: url(./image/rule_f/rule_b1.svg);
+  width: 420px;
+  height: 170px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid rgba(255, 255, 255, 0);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  color: rgb(197, 112, 0);
+  font-size: 60px;
+}
+
+.school_rule{
+  background-image: url(./image/rule_f/rule_b1.svg);
+  width: 420px;
+  height: 170px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid rgba(255, 255, 255, 0);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  color: rgb(197, 112, 0);
+  font-size: 60px;
+}
+
+.rule_main{
+  margin-left: 200px;
+  margin-top: 140px;
+}
